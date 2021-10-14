@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4%;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  background-color: #f1f1e5;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+}
+
+.header .bar {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 8px;
+}
+
+/* Logo */
+
+.header .bar .logo {
+  flex-basis: 20%;
+}
+
+.header .bar .logo img {
+  object-fit: fill;
+  max-height: 40px;
+}
+
+/* Navigation */
+
+.header .bar .menu {
+  flex-basis: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.header .bar .menu ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu ul li {
+  margin-right: 16px;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.menu ul li i {
+  margin-right: 8px;
+}
+
+.menu ul li a {
+  color: #2a2d2e;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.menu ul li a:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Social */
+
+.header .bar .social {
+  flex-basis: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header .bar .social ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.header .bar .social ul li {
+  list-style: none;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.header .bar .social ul li a {
+  color: #2a2d2e;
+  opacity: 0.6;
+  font-size: 18px;
+}
+
+.header .bar .social ul li a:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Hero */
+
+.header .hero {
+  height: 220px;
+  padding: 8px;
+  background-image: url("images/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .hero .hero-content {
+  color: purple;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.header .hero .hero-content:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Main */
+
+.main {
+  background-color: #dadada;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 8px;
+}
+
+.main .topics {
+  flex-basis: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+}
+
+.main .topics .topics-wrapper {
+  flex-basis: 67%;
+  display: flex;
+  flex-flow: row column;
+  align-items: stretch;  
+  gap: 8px;
+}
+
+/* Category Content */
+
+.category {
+  flex-basis: 100%;
+  border: 1px solid rgb(161, 72, 72);
+}
+
+.category img {
+  width: 100%;
+}
+
+.category .category-text {
+  position: relative;
+  top: -25px;
+  padding-left: 10px;
+}
+
+.category .category-text p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.category .category-text .date {
+  color: white;
+  margin-bottom: 1px;
+}
+
+.category .category-text h3 {
+  background-color: rgb(161, 72, 72);
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.category .category-text button {
+  border:none;
+  background-image:none;
+  background-color:transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  margin-top: 10px;
+}
+
+
+/* Search */
+
+.main .topics .search {
+  flex-basis: 33%;
+  background-color: rgb(161, 72, 72);
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* Aside */
+
+.main .aside {
+  flex-basis: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px; 
+}
+
+.main .aside .news {
+  background-color: rgb(161, 72, 72);
+  color: white;
+  font-size: 12px;
+  font-weight: 300;
+  padding: 8px; 
+}
+
+/* Footer */
+
+.footer {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 300;
+  color: grey;
+}
+
+/* MEDIA QUERIES */
+
+/* TABLET */
+@media(max-width: 700px) {
+  .header .bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+  }
+  .main {
+    background-color: #e9ff25;
+    flex-direction: column;
+  }
+    .main .aside .news {
+    flex-basis: 50%;  
+  }
+}
+
+/* PHONES */
+@media(max-width: 400px) {
+  .header .bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+  }
+  .main {
+    background-color: #ff25f4;
+    flex-direction: column;
+  }
+  .main .aside .news {
+    flex-basis: 50%;  
+  }
+}
