@@ -126,3 +126,27 @@
   flex-basis: 100%;
   background-color: #eeda81;
 }
+
+/* MEDIA QUERIES */
+
+/* TABLET */
+@media(max-width: 700px) {
+  .main {
+    background-color: #e9ff25;
+    flex-direction: column;
+  }
+    .main .aside .news {
+    flex-basis: 50%;  
+  }
+}
+
+/* PHONES */
+@media(max-width: 400px) {
+  .main {
+    background-color: #ff25f4;
+    flex-direction: column;
+  }
+  .main .aside .news {
+    flex-basis: 50%;  
+  }
+}
